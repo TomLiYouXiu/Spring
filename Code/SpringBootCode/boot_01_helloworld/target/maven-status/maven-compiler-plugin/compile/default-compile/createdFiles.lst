@@ -1,2 +1,8 @@
 xyz\liyouxiu\boot\controller\HelloController.class
+xyz\liyouxiu\boot\bean\User.class
+xyz\liyouxiu\boot\bean\Pet.class
+xyz\liyouxiu\boot\config\MyConfig.class
+xyz\liyouxiu\boot\controller\PersonController.class
 xyz\liyouxiu\boot\MainApplication.class
+xyz\liyouxiu\boot\bean\Person.class
+xyz\liyouxiu\boot\bean\Car.class
