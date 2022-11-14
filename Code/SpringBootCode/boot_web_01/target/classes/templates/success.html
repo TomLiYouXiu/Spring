@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1 th:text="${msg}">哈哈</h1>
+<h2>
+    <a href="http://liyouxiu.xyz/" th:href="${link}">李优秀</a> <br/>
+    <a href="http://liyouxiu.xyz/" th:href="@{link}">李优秀</a> <br/>
+
+</h2>
+</body>
+</html>
