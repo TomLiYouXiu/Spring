@@ -459,14 +459,15 @@ public class EurekaApplication {
 
 ```yaml
 server:
-  port: 10086
+  port: 10086 #服务端口
 spring:
   application:
-    name: eureka-server
+    name: eurekaserver #eureka的服务名称
 eureka:
-  client:
-    service-url: 
+  client: #eureka的地址信息，要是有多个以逗号隔开
+    service-url:
       defaultZone: http://127.0.0.1:10086/eureka
+
 ```
 
 

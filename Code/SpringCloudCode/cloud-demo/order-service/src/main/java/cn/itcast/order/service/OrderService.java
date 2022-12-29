@@ -13,17 +13,19 @@ public class OrderService {
     @Autowired
     private OrderMapper orderMapper;
 
+
     @Autowired
     private RestTemplate restTemplate;
     public Order queryOrderById(Long orderId) {
         // 1.查询订单
         Order order = orderMapper.findById(orderId);
-        // 2.利用RestTemplate发送Http请求，查询用户
-        // 2.1 url路径
-        String url = "http://localhost:8081/user/"+order.getUserId();
-        // 2.2发送http请求实现远程调用
-        User user = restTemplate.getForObject(url, User.class);
-        // 3.封装User到Order
+        // 2.远程查询user
+        // 2.1 url地址
+//        String url="http://localhost:8081/user/"+order.getUserId();
+        String url="http://userservice/user/"+order.getUserId();
+        // 2.2 发起调用
+        User user=restTemplate.getForObject(url,User.class);
+        // 3.存入order
         order.setUser(user);
         // 4.返回
         return order;
